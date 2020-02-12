@@ -1,8 +1,8 @@
 local args = { ... }
 
 local function downloadFiles()
-  shell.run("wget https://cc.znepb.me/randomlabel/adjectives.txt adjectives.txt")
-  shell.run("wget https://cc.znepb.me/randomlabel/animals.txt animals.txt")
+  shell.run("wget https://raw.githubusercontent.com/znepb-cc/random-label/master/adjectives.txt adjectives.txt")
+  shell.run("wget https://raw.githubusercontent.com/znepb-cc/random-label/master/animals.txt animals.txt")
 end
 
 local function deleteFiles()
