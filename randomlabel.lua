@@ -26,7 +26,7 @@ local function generateAnimal()
   return string.lower(animals[math.random(1, #animals)])
 end
 
-if args[1] == "--dump" then
+if args[1] == "--dump" or args[1] == "-d" then
   local list = {}
   local labels = fs.open(shell.dir() .. "/labels.txt", "a")
   for i = 1, tonumber(args[2]) do
@@ -40,7 +40,6 @@ else
 
   os.setComputerLabel(label)
   print("Your new label has been created! It is " .. label)
-  sleep(0.1)
 end
 
 deleteFiles()
